@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DIPLOMModelContainer" CdmEntityContainer="DIPLOMEntities">
+    <EntitySetMapping Name="IAProduct">
+      <EntityTypeMapping TypeName="DIPLOMModel.IAProduct">
+        <MappingFragment StoreEntitySet="IAProduct">
+          <ScalarProperty Name="IAProdict_ID" ColumnName="IAProdict_ID" />
+          <ScalarProperty Name="IA_ID" ColumnName="IA_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="IAP_Amount" ColumnName="IAP_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingridient">
+      <EntityTypeMapping TypeName="DIPLOMModel.Ingridient">
+        <MappingFragment StoreEntitySet="Ingridient">
+          <ScalarProperty Name="Ingridient_ID" ColumnName="Ingridient_ID" />
+          <ScalarProperty Name="Ingridient_Name" ColumnName="Ingridient_Name" />
+          <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternalApplication">
+      <EntityTypeMapping TypeName="DIPLOMModel.InternalApplication">
+        <MappingFragment StoreEntitySet="InternalApplication">
+          <ScalarProperty Name="IA_ID" ColumnName="IA_ID" />
+          <ScalarProperty Name="Date_Start" ColumnName="Date_Start" />
+          <ScalarProperty Name="Date_End" ColumnName="Date_End" />
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="DIPLOMModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="Post_ID" ColumnName="Post_ID" />
+          <ScalarProperty Name="Post_Name" ColumnName="Post_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="DIPLOMModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Shelf_Life" ColumnName="Shelf_Life" />
+          <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReceiptIngridients">
+      <EntityTypeMapping TypeName="DIPLOMModel.ReceiptIngridients">
+        <MappingFragment StoreEntitySet="ReceiptIngridients">
+          <ScalarProperty Name="RI_ID" ColumnName="RI_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Ingridient_ID" ColumnName="Ingridient_ID" />
+          <ScalarProperty Name="RI_Amount" ColumnName="RI_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="DIPLOMModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+          <ScalarProperty Name="Status_Name" ColumnName="Status_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier">
+      <EntityTypeMapping TypeName="DIPLOMModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Supplier_Adress" ColumnName="Supplier_Adress" />
+          <ScalarProperty Name="Supplier_Note" ColumnName="Supplier_Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierIngridient">
+      <EntityTypeMapping TypeName="DIPLOMModel.SupplierIngridient">
+        <MappingFragment StoreEntitySet="SupplierIngridient">
+          <ScalarProperty Name="SI_ID" ColumnName="SI_ID" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Ingridient_ID" ColumnName="Ingridient_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DIPLOMModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unit">
+      <EntityTypeMapping TypeName="DIPLOMModel.Unit">
+        <MappingFragment StoreEntitySet="Unit">
+          <ScalarProperty Name="Unit_ID" ColumnName="Unit_ID" />
+          <ScalarProperty Name="Unit_Name" ColumnName="Unit_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DIPLOMModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Worker">
+      <EntityTypeMapping TypeName="DIPLOMModel.Worker">
+        <MappingFragment StoreEntitySet="Worker">
+          <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+          <ScalarProperty Name="Worker_Surname" ColumnName="Worker_Surname" />
+          <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+          <ScalarProperty Name="Worker_Patronymic" ColumnName="Worker_Patronymic" />
+          <ScalarProperty Name="Worker_Phone" ColumnName="Worker_Phone" />
+          <ScalarProperty Name="Post_ID" ColumnName="Post_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище DIPLOMModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище DIPLOMModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище DIPLOMModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище DIPLOMModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DIPLOMModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище DIPLOMModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DIPLOMModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище DIPLOMModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище DIPLOMModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

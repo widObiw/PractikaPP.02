@@ -1,0 +1,27 @@
+﻿<Page x:Class="InternalApplicationWPF.Pages.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternalApplicationWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Authorization">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Text="Авторизация" Margin="0 60 0 20" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Leto Text Sans"/>
+            <TextBlock Text="Логин" HorizontalAlignment="Center" FontSize="26" FontFamily="Leto Text Sans"/>
+            <TextBox x:Name="tbLogin" Width="200" Height="30" FontSize="20" FontFamily="Leto Text Sans" Margin="0 0 0 10"/>
+            <TextBlock Text="Пароль" HorizontalAlignment="Center" FontSize="26" FontFamily="Leto Text Sans"/>
+            <PasswordBox x:Name="pbPassword" Width="200" Height="30" FontSize="16" FontFamily="Leto Text Sans" Margin="0 0 0 20"/>
+            <Button x:Name="btnAuthor" Content="Войти" Height="30" Width="200" FontSize="22" FontFamily="Leto Text Sans" Click="btnAuthor_Click" Background="#0080ff" Foreground="White" BorderBrush="White"/>
+        </StackPanel>
+    </Grid>
+</Page>

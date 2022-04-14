@@ -1,0 +1,48 @@
+﻿<Page x:Class="InternalApplicationWPF.Pages.About"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternalApplicationWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="About">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Leto Text Sans"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="281*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="102*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Border  BorderThickness="1" Grid.RowSpan="3" Margin="0,10,569,0" Grid.ColumnSpan="2">
+            <Image Source="/Pages/Магазин.png"/>
+        </Border>
+        <TextBlock x:Name="tbNameProduct" Grid.Row="0" Grid.Column="1" Text="Название продукта" Margin="10,10,0,77" Grid.RowSpan="2"/>
+        <TextBlock x:Name="tbVersProduct" Grid.Row="1" Grid.Column="1" Text="Версия" Margin="10,0,0,76" Grid.RowSpan="2"/>
+        <TextBlock x:Name="tbCopyProduct" Grid.Row="2" Grid.Column="1" Text="Авторские права" Margin="10,0,0,0"/>
+        <TextBlock x:Name="tbCompProduct" Grid.Row="2" Grid.Column="1" Text="Название организации" Margin="10,76,0,0" Grid.RowSpan="2"/>
+
+
+
+
+       
+            <Button x:Name="btnBack" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" Content="Назад" Height="30" Width="120" Margin="0 0 10 5" Background="#FF110C6A" Foreground="White" BorderBrush="White" FontSize="24" FontFamily="Leto Text Sans" Click="btnBack_Click"/>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,65 @@
+﻿<Page x:Class="InternalApplicationWPF.Pages.Receptor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternalApplicationWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Receptor">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#0080ff"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontFamily" Value="Leto Text Sans"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="13"
+                             Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Loaded="Grid_Loaded">
+        <TextBox x:Name="tbSerch" Height="30" FontSize="18" VerticalAlignment="Top" BorderThickness="0" Margin="0 10 0 0" Foreground="Black" HorizontalAlignment="Center"  Width="250" TextChanged="TbSerch_TextChanged" />
+        <TextBlock Text="Поиск по названию" FontSize="18" Width="250" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280 10 0 0" IsHitTestVisible="False" Foreground="Black">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=tbSerch}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <StackPanel>
+            <DataGrid x:Name="dg" Width="500" Height="270" Margin="0 60 0 0" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Код продукции" Binding="{Binding Product_ID}"/>
+                    <DataGridTextColumn Header="Наименование"  Binding="{Binding Product_Name}" Width="*"/>
+                    <DataGridTextColumn Header="Еденичца измерения" Binding="{Binding Unit.Unit_Name}"/>
+                    <DataGridTextColumn Header="Срок годности"  Binding="{Binding Shelf_Life}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal" Margin="0 15 0 0" HorizontalAlignment="Center">
+                <Button x:Name="btnAdd" Content="Добавить" Width="150" Height="30" Click="btnAdd_Click"/>
+                <Button x:Name="btnEdit" Content="Изменить" Width="150" Height="30" Margin="15 0 15 0" Click="btnEdit_Click"/>
+                <Button x:Name="btnRemove" Content="Удалить" Width="150" Height="30" Click="btnRemove_Click"/>
+
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="btnBack" HorizontalAlignment="Right" Width="120" Height="30" Content="Назад" VerticalAlignment="Top" Margin="0 10 20 0" Background="#FF110C6A" Click="btnBack_Click"/>
+    </Grid>
+</Page>

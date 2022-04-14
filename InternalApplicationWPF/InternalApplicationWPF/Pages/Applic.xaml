@@ -1,0 +1,81 @@
+﻿<Page x:Class="InternalApplicationWPF.Pages.Applic"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InternalApplicationWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Applic">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Leto Text Sans"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#0080ff"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontFamily" Value="Leto Text Sans"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="13"
+                             Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="259*"/>
+            <ColumnDefinition Width="541*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center" Grid.Column="1">
+            <DataGrid x:Name="dg" Margin="0 50 0 0" Width="400" Height="250" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Позиция" Binding="{Binding IAProdict_ID}" Width="45"/>
+                    <DataGridTextColumn Header="Продукция"  Binding="{Binding Product.Product_Name}"/>
+                    <DataGridTextColumn Header="Кол-во" Binding="{Binding IAP_Amount}" Width="80"/>
+                    <DataGridTextColumn Header="Ед.изм"  Binding="{Binding Product.Unit.Unit_Name}"/>
+                    <DataGridTextColumn Header="Дата заказа" Binding="{Binding InternalApplication.Date_Start}"/>
+                    <DataGridTextColumn Header="Дата просрочки" Binding="{Binding InternalApplication.Date_End}"/>
+                    <DataGridTextColumn Header="Сотрудник" Binding="{Binding InternalApplication.Worker.Worker_Surname}"/>
+                    <DataGridTextColumn Header="Статус" Binding="{Binding InternalApplication.Status.Status_Name}"/>
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Text="Напечатать в" HorizontalAlignment="Center" Margin="0 10 0 0"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnWord" Width="120" Height="30" Content="Word" Margin="0 5 0 0" Click="btnWord_Click"/>
+                <Button x:Name="btnExcel" Width="120" Height="30" Content="Ecxel" Margin="10 5 0 0" Click="btnExcel_Click"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0"  HorizontalAlignment="Center" Margin="50 0 0 0">
+            <TextBlock Text="Добавить заявку"  Margin="0 10 0 20" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" FontFamily="Leto Text Sans"/>
+            <Button x:Name="btnAplic" Content="Добавить" Width="200" Height="30" FontSize="22" Margin="0 0 0 10" FontFamily="Leto Text Sans" Click="btnAplic_Click"/>
+            <GroupBox Header="Сортировать по" Foreground="White" FontSize="20" Margin="0 20 0 0">
+                <StackPanel>
+                    <RadioButton x:Name="rbtnDateStart" Content="Дата оформления" FontSize="18" Foreground="White" Checked="rbtnDateStart_Checked"/>
+                    <RadioButton x:Name="rbtnDateEnd" Content="Дата просрочки" FontSize="18" Foreground="White" Checked="rbtnDateEnd_Checked"/>
+                </StackPanel>
+            </GroupBox>
+            <TextBlock Text="Заявка №" Margin="0 20 0 0" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="cbIAID" Width="200" Height="30" DisplayMemberPath="IA_ID" SelectedValuePath="IA_ID" SelectionChanged="cbIAID_SelectionChanged"/>
+            <Button x:Name="btnBack" Content="Назад" Width="200" Height="30" FontSize="22" Margin="0 70 0 10" Background="#FF110C6A" FontFamily="Leto Text Sans" Click="btnBack_Click"/>
+
+
+        </StackPanel>
+    </Grid>
+</Page>
+

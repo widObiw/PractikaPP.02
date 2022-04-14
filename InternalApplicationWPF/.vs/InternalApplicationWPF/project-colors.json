@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e0b842c4-5c35-49aa-a099-4e58db2d17f2": {
+      "ProjectGuid": "e0b842c4-5c35-49aa-a099-4e58db2d17f2",
+      "DisplayName": "InternalApplicationWPF",
+      "ColorIndex": 0
+    },
+    "da4a27bc-9c24-41e0-a253-c7efdd09920f": {
+      "ProjectGuid": "da4a27bc-9c24-41e0-a253-c7efdd09920f",
+      "DisplayName": "UnitTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

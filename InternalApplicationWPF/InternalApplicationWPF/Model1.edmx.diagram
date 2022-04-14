@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f89245993cc490e92e18acf04673f0d" Name="Diagram1">
+        <EntityTypeShape EntityType="DIPLOMModel.IAProduct" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Ingridient" Width="1.5" PointX="5.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.InternalApplication" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Post" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Product" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.ReceiptIngridients" Width="1.5" PointX="7.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Status" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Supplier" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.SupplierIngridient" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Unit" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Users" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DIPLOMModel.Worker" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="DIPLOMModel.FK_IAProduct_InternalApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_IAProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_Ingridient_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_ReceiptIngridients_Ingridient" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_SupplierIngridient_Ingridient" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_InternalApplication_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_InternalApplication_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_Worker_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_Product_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_ReceiptIngridients_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_SupplierIngridient_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="DIPLOMModel.FK_User_Worker" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
